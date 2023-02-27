@@ -6,36 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="Canvas.js" defer></script>
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="Tool.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <main>
-        <section class="controls">
+        <section class="tools">
             <div class="slidecontainer">
-                <label for="canvasLength">Lengte</label>
+                <label for="canvasLength">Lengte:</label>
                 <br>
-                <input type="range" min="100" max="100" value="100" class="slider" id="canvasLength">
+                <input type="range" min="100" max="1000" value="300" class="slider" id="canvasLength">
                 <p>
                     <span id="canvasCurrentLength"></span>
                 </p>
-            </div>
-            <div class="slidecontainer">
-                <label for="canvasWidth">Lengte</label>
                 <br>
-                <input type="range" min="10" max="100" value="100" class="slider" id="canvasWidth">
+                <label for="canvasWidth">Breedte:</label>
+                <br>
+                <input type="range" min="100" max="1000" value="300" class="slider" id="canvasWidth">
                 <p>
                     <span id="canvasCurrentWidth"></span>
                 </p>
+                <button onClick="window.location.reload();">Wijzigen</button>
             </div>
-            <br>
+            <div class="color">
+                <label for="color">Kleur:</label>
+                <br>
+                <input type="color" value="#ff0000" id="color" />
+            </div>
+            <div class="penSize">
+                <label for="penSize">Penseel grootte</label>
+                <br>
+                <input type="range" name="penSize" id="penSize" min="1" max="30" value="1">
+                <p>
+                    <span id="currentPenSize"></span>
+                </p>
+            </div>
+            <div class="shape">
+                <label for="shape">Penseelvorm</label>
+                <br>
+                <select name="shape" id="shape">
+                    <option value="butt">Vlak</option>
+                    <option value="round">Rond</option>
+                    <option value="square">Vierkant</option>
+                </select>
+            </div>
         </section>
         <section class="canvas">
-            <table id="field"></table>
-            <br>
-            <br>
+            <canvas id="canvas" width="560" height="360"></canvas>
         </section>
     </main>
 </body>

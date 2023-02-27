@@ -1,24 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 
 main{
     width: 80vw;
     margin: 0 auto;
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+p{
+    margin: 0;
+}
+
+#canvas{
+    border: 3px solid black;
+}
+
+.tools div{
+    margin-bottom: 3em; 
+}
+
+button{
+    background-color: #36494E; 
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: 0.3s;
+    border-style: none;
+    cursor: pointer;
     margin-top: 1em;
 }
 
-table{
-    border: 1px solid purple;
-    border-spacing: none;
-    border-collapse: collapse; 
+button:hover{
+    background-color: #A9CEF4; 
+    transition: 0.3s;
 }
 
-table td{
-    border: none;
-    width: 0.8vw;
-    height: 0.8vw;
-    padding: 0;
-    margin: 0;
+input[type=color]{
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+label{
+    font-weight: bold;
+}
+
+select{
+    margin-top: 1em;
 }
